@@ -12,3 +12,13 @@ db.employees.insertMany([
             department : "test" 
         }
     ]);
+
+    db.employees.deleteOne(
+        {department:"test"}
+    );
+
+    db.employees.deleteMany(
+        {department:"test"}
+    );
+
+    
