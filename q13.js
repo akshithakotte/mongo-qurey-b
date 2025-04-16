@@ -17,10 +17,3 @@ db.employees.find(
 );
 db.employees.find({"address.city":"Jacksonville"});
 db.employees.find({ location:"TX" });
-
-db.employees.updateOne(
-    { email : "amy@gmail.com"},
-    { $set : {department:"Admin"}}
-);
-
-db.employees.find()
