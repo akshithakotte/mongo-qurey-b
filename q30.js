@@ -4,9 +4,9 @@ Inside replica-example, create 3 folders - data1, data2 and data3
 
 start mongod -replSet rs1 -logpath C:\replica-example\data1\1.log --dbpath C:\replica-example\data1 --port 27018
 
-start mongod -replSet rs1 -logpath d:\replica-example\data2\2.log --dbpath d:\replica-example\data2\ --port 27019
+start mongod -replSet rs1 -logpath C:\replica-example\data2\2.log --dbpath C:\replica-example\data2 --port 27019
 
-start mongod -replSet rs1 -logpath d:\replica-example\data3\3.log --dbpath d:\replica-example\data3\ --port 27020
+start mongod -replSet rs1 -logpath C:\replica-example\data3\3.log --dbpath C:\replica-example\data3 --port 27020
 
 mongosh --port 27018
 
@@ -18,7 +18,7 @@ rs.status()
 
 Show dbs
 use newdb
-db.createCollection("emp")show
+db.createCollection("emp")
 db.emp.insertOne({name:"John"})
 exit
 
@@ -39,7 +39,7 @@ exit
 
 Go to primary 27018
 mongosh --port 27018
-Use admin
+use admin
 db.shutdownServer() 
 
 
